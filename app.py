@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 from PyPDF2 import PdfReader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
@@ -130,4 +130,4 @@ if prompt := st.chat_input("Ask me about my Smart City project..."):
                 # Add assistant message to history
                 st.session_state.messages.append({"role": "assistant", "content": response.content})
     else:
-        st.error("Resume file not found! Please make sure 'resume.pdf' is in the main folder.")
+        st.error("Please upload and process the resume in the sidebar first!")
