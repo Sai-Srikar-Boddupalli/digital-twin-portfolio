@@ -10,4 +10,4 @@ langchain-huggingface>=0.1.0
 langchain-text-splitters>=0.3.0
 sentence-transformers>=3.0.0
 requests>=2.31.0
-duckduckgo-search>=5.0.0
+duckduckgo-search>=6.0.0
