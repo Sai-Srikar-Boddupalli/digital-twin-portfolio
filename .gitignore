@@ -1,5 +1,5 @@
 .env
-venv/
-faiss_index/
 __pycache__/
-*.pdf
+contacts.json
+analytics.log
+visitor_count.json
