@@ -1,11 +1,10 @@
 # ╔══════════════════════════════════════════════════════════════╗
-# ║  Sai Srikar Boddupalli — Digital Twin Portfolio V3          ║
+# ║  Sai Srikar Boddupalli — Digital Twin Portfolio V3.1        ║
 # ║  Full Stack Engineer · AI Systems                           ║
 # ║  Theme: Midnight Royale (Navy & Champagne Gold)             ║
 # ╚══════════════════════════════════════════════════════════════╝
 
 import streamlit as st
-import streamlit.components.v1 as components
 import time, os, json, smtplib, re, datetime, requests
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -14,7 +13,6 @@ from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
-from langchain_community.utilities import DuckDuckGoSearchAPIWrapper
 from dotenv import load_dotenv
 
 # ── 1. INIT & ROUTING (STEALTH MODE) ───────────────────────────
@@ -86,14 +84,6 @@ def send_email(name, sender_email, message):
 # ── 4. LINKEDIN DATA PIPELINE ──────────────────────────────────
 @st.cache_data(ttl=86400) # Cache for 24 hours
 def fetch_linkedin_profile():
-    """
-    PRODUCTION ARCHITECTURE NOTE:
-    To make this truly live, you would replace this block with an API call to Proxycurl.
-    Example:
-    headers = {'Authorization': f'Bearer {os.getenv("PROXYCURL_API_KEY")}'}
-    res = requests.get('https://nubela.co/proxycurl/api/v2/linkedin', params={'url': 'https://linkedin.com/in/sai-srikar-boddupalli'}, headers=headers)
-    return format_linkedin_json_to_text(res.json())
-    """
     return """
     Sai Srikar Boddupalli
     Full Stack Software Engineer | AI Systems Architect | New York, NY
@@ -129,7 +119,6 @@ def get_llm():
 
 vector_store = get_vector_store()
 llm = get_llm()
-web_search = DuckDuckGoSearchAPIWrapper()
 increment_visitor()
 
 # ── 6. ADMIN DASHBOARD ─────────────────────────────────────────
@@ -297,7 +286,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ═══════════════════════════════════════════════════════════════
-# ── 10. JD ANALYSIS TOOL (Pure Analysis) ───────────────────────
+# ── 10. JD ANALYSIS TOOL ───────────────────────────────────────
 # ═══════════════════════════════════════════════════════════════
 st.markdown('<div class="sl fade-up d5">Alignment Engine</div>', unsafe_allow_html=True)
 st.markdown('<div class="widget-wrap fade-up d5"><div class="widget-h">Job Description Matcher</div><div class="widget-s">Paste a JD. My agent will evaluate it against my live LinkedIn profile data and calculate an alignment score.</div></div>', unsafe_allow_html=True)

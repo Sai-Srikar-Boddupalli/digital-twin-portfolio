@@ -9,7 +9,3 @@ langchain-huggingface>=0.1.0
 langchain-text-splitters>=0.3.0
 sentence-transformers>=3.0.0
 requests>=2.31.0
-duckduckgo-search>=6.2.14
-torch>=2.0.0
-torchvision>=0.15.0
-transformers>=4.40.0
