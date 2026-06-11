@@ -1,6 +1,6 @@
 # ╔══════════════════════════════════════════════════════════════╗
-# ║  Sai Srikar Boddupalli — Digital Twin Portfolio V3.1        ║
-# ║  Full Stack Engineer · AI Systems                           ║
+# ║  Sai Srikar Boddupalli — Digital Twin Portfolio V4          ║
+# ║  AI/ML Engineer · Data Systems                              ║
 # ║  Theme: Midnight Royale (Navy & Champagne Gold)             ║
 # ╚══════════════════════════════════════════════════════════════╝
 
@@ -18,7 +18,7 @@ from dotenv import load_dotenv
 # ── 1. INIT & ROUTING (STEALTH MODE) ───────────────────────────
 load_dotenv()
 st.set_page_config(
-    page_title="Sai Srikar | Senior Engineer",
+    page_title="Sai Srikar | AI/ML Engineer",
     page_icon="⚜️",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -81,93 +81,58 @@ def send_email(name, sender_email, message):
         return True
     except Exception as e: return str(e)
 
-# ── 4. LINKEDIN DATA PIPELINE ──────────────────────────────────
-@st.cache_data(ttl=86400) # Cache for 24 hours
-def fetch_linkedin_profile():
+# ── 4. KNOWLEDGE BASE PIPELINE ─────────────────────────────────
+@st.cache_data(ttl=3600) # Reduced cache time to prevent stale data
+def fetch_resume_data():
     return """
+    Sai Srikar Boddupalli | New York, NY | (716) 986-4873 | saisrikarboddupalli@gmail.com
 
+    PROFESSIONAL SUMMARY:
+    AI & ML Engineer with 5+ years of experience bridging scalable data infrastructure and advanced predictive modeling. Expertise in designing robust machine learning pipelines, integrating LLMs, and training deep learning and gradient algorithms (PyTorch, XGBoost) to drive outcomes in fintech and healthcare. Strong foundation in Big Data (Spark, Kafka) and MLOps (Docker, Kubernetes, AWS, Azure), enabling full lifecycle model development from feature engineering and real time data ingestion to production deployment.
 
+    EXPERIENCE:
+    AI / ML Engineer | RS Technologies Inc | Remote | Dec 2025 - Present
+    - Architected end-to-end Python-based machine learning pipelines orchestrated via Apache Airflow.
+    - Developed automated feature extraction workflows using Pandas and NumPy.
+    - Extended RESTful APIs to serve ML model predictions and data to third-party vendors across AWS and Azure.
 
+    Machine Learning Engineer (Contract) | Tekly Studio LLC | Remote | Jan 2025 - Nov 2025
+    - Spearheaded the integration of Large Language Models (LLMs) via PyTorch and Hugging Face.
+    - Built real-time Python ingestion pipelines using Apache Kafka for cryptocurrency market data.
+    - Engineered optimized, multi-tenant SQL Server schemas.
+    - Managed end-to-end MLOps deployment using Docker and Kubernetes.
 
-1
+    Machine Learning Engineer | SelectFi | Buffalo, NY | Aug 2024 - Dec 2024
+    - Developed and evaluated gradient boosting models (XGBoost, LightGBM) to predict optimal lender-to-borrower rate matching.
+    - Engineered comprehensive credit risk feature pipelines.
+    - Deployed automated, real-time credit decisioning logic as containerized microservices.
 
-Automatic Zoom
-Sai Srikar Boddupalli½ New York, NY Ó (716) 986-4873 Rsaisrikarboddupalli@gmail.com
-PROFESSIONAL SUMMARY
-AI & ML Engineer with 5+ years of experience bridging scalable data infrastructure and advanced predictive modeling. Exper-
-tise in designing robust machine learning pipelines, integrating LLMs, and training deep learning and gradient algorithms (PyTorch,
-XGBoost) to drive outcomes in fintech and healthcare. Strong foundation in Big Data (Spark, Kafka) and MLOps (Docker, Kuber-
-netes, AWS, Azure), enabling full lifecycle model development from feature engineering and real time data ingestion to production
-deployment.
-EXPERIENCE
-RS Technologies Inc Dec 2025 – Present
-AI / ML Engineer | Remote
-• Architected end-to-end Python-based machine learning pipelines orchestrated via Apache Airflow, optimizing data flow to
-model inference endpoints for downstream consumption.
-• Developed automated feature extraction workflows using Pandas and NumPy to ensure high-fidelity data input for predictive
-models, reducing data anomalies and ingestion errors.
-• Extended RESTful APIs to serve ML model predictions and data to third-party vendors, standardizing AI integrations across
-AWS and Azure cloud environments.
-• Collaborated with cross-functional stakeholders to align AI/ML architectures with strategic business workflows, authoring techni-
-cal specifications for model governance.
-Tekly Studio LLC Jan 2025 – Nov 2025
-Machine Learning Engineer (Contract) | Remote
-• Spearheaded the integration of Large Language Models (LLMs) via PyTorch and Hugging Face, automating complex unstruc-
-tured data extraction, tagging, and text generation.
-• Built real-time Python ingestion pipelines using Apache Kafka for cryptocurrency market data, ensuring low-latency data avail-
-ability for time-series forecasting models.
-• Engineered optimized, multi-tenant SQL Server schemas designed to handle high-frequency reads/writes required by concurrent
-analytical queries and training workloads.
-• Managed end-to-end MLOps environment configuration, model testing, and seamless deployment across development and pro-
-duction servers using Docker and Kubernetes.
-SelectFi Aug 2024 – Dec 2024
-Machine Learning Engineer | Buffalo, NY
-• Developed and evaluated gradient boosting models (XGBoost, LightGBM) utilizing rigorous statistical modeling to predict
-optimal lender-to-borrower rate matching.
-• Engineered comprehensive credit risk feature pipelines, transforming raw customer financial records into clean, predictive metrics
-for high-quality model training datasets.
-• Deployed automated, real-time credit decisioning logic as containerized microservices, integrating internal predictive models with
-external lending APIs.
-• Maintained strict data integrity, auditability, and compliance for model training data within a highly regulated fintech environment.
-University at Buffalo Sep 2023 – Jul 2024
-Graduate Research Assistant – Applied ML | Buffalo, NY
-• Architected analytical models and data pipelines utilizing SciPy and Scikit-learn to ingest, transform, and evaluate massive
-research datasets under strict deadlines.
-• Applied advanced statistical analysis and machine learning techniques to extract actionable insights, directly contributing to
-data-driven research publications.
-Cognizant Technology Solutions Jun 2021 – Aug 2023
-Data Engineer – Advanced Analytics | Hyderabad, India
-• Built the enterprise data foundation for downstream analytics and ML applications using Python, PySpark, and Azure Data
-Factory (ADF) for large-scale healthcare datasets.
-• Optimized complex SQL queries and relational models in Microsoft SQL Server to accelerate data retrieval for business intelli-
-gence and predictive reporting.
-• Enforced strict HIPAA-compliant protocols across the pipeline lifecycle, ensuring secure data profiling and target mapping for
-sensitive patient records.
-PROJECTS
-LLM-Powered Personal Digital Twin for Recruiter Interactions
-• Designed and deployed a Retrieval-Augmented Generation (RAG) based Large Language Model application serving as an inter-
-active conversational agent for prospective recruiters.
-• Engineered the data pipeline to embed personal resume data and technical skills into a Vector Database, containerizing the
-application with Docker for scalable deployment.
-TECHNICAL SKILLS
-• Machine Learning & AI: Deep Learning (PyTorch, TensorFlow), LLMs, RAG, XGBoost, Scikit-learn, NLP, Statistical Modeling
-• Languages & Libraries: Python (Pandas, NumPy, SciPy), SQL, Java, C#, JavaScript
-• Big Data & Engineering: Apache Spark, PySpark, Kafka, Airflow, Azure Data Factory (ADF), ETL/ELT
-• MLOps & Cloud: AWS, GCP, Microsoft Azure, Docker, Kubernetes, CI/CD, REST APIs
-• Databases: Microsoft SQL Server, Vector Databases, Schema Design, Query Optimization
-EDUCATION
-Master of Professional Studies – Computer Information Systems & Data Sciences
-University at Buffalo, State University of New York
-Bachelor of Engineering – Computer Science
-Sri Chandrasekharendra Saraswathi Viswa Maha Vidhyalaya, India
+    Graduate Research Assistant (Applied ML) | University at Buffalo | Sep 2023 - Jul 2024
+    - Architected analytical models and data pipelines utilizing SciPy and Scikit-learn.
+    - Applied advanced statistical analysis and machine learning techniques for research publications.
 
+    Data Engineer (Advanced Analytics) | Cognizant | Hyderabad, India | Jun 2021 - Aug 2023
+    - Built the enterprise data foundation using Python, PySpark, and Azure Data Factory (ADF).
+    - Optimized complex SQL queries and relational models in Microsoft SQL Server.
+    - Enforced strict HIPAA-compliant protocols across the pipeline lifecycle.
+
+    SKILLS:
+    - Machine Learning & AI: Deep Learning (PyTorch, TensorFlow), LLMs, RAG, XGBoost, Scikit-learn, NLP
+    - Languages & Libraries: Python, SQL, Java, C#, JavaScript, Pandas, NumPy, SciPy
+    - Big Data & Engineering: Apache Spark, PySpark, Kafka, Airflow, Azure Data Factory, ETL/ELT
+    - MLOps & Cloud: AWS, GCP, Azure, Docker, Kubernetes, CI/CD, REST APIs
+    - Databases: Microsoft SQL Server, Vector Databases, Schema Design
+
+    EDUCATION:
+    - Master of Professional Studies - Computer Information Systems & Data Sciences, University at Buffalo
+    - Bachelor of Engineering - Computer Science, Sri Chandrasekharendra Saraswathi Viswa Maha Vidhyalaya
     """
 
 # ── 5. AI BACKEND ──────────────────────────────────────────────
 @st.cache_resource(show_spinner=False)
 def get_vector_store():
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-    text = fetch_linkedin_profile()
+    text = fetch_resume_data()
     chunks = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100).split_text(text)
     return FAISS.from_texts(chunks, embedding=embeddings)
 
@@ -299,11 +264,11 @@ section[data-testid="stSidebar"] { display: none; }
 # ── 8. HERO ────────────────────────────────────────────────────
 # ═══════════════════════════════════════════════════════════════
 hero_title = f"Engineering for <span class='g'>{target_company.title()}</span>" if target_company else "Sai Srikar <span class='g'>Boddupalli</span>"
-hero_sub = "Ship faster. Scale harder. Own the product." if is_founder_mode else "Architecting production-grade AI systems and scalable cloud backends."
+hero_sub = "Ship faster. Scale harder. Own the product." if is_founder_mode else "Architecting production-grade AI systems, ML pipelines, and scalable cloud backends."
 
 st.markdown(f"""
 <div class="hero fade-up d1">
-    <div class="hero-role">Full Stack Engineer &nbsp;·&nbsp; AI Systems</div>
+    <div class="hero-role">AI / ML Engineer &nbsp;·&nbsp; Data Systems</div>
     <div class="hero-name">{hero_title}</div>
     <div class="hero-sub">{hero_sub}</div>
     <div class="hero-links">
@@ -320,26 +285,27 @@ st.markdown(f"""
 st.markdown('<div class="sl fade-up d2">Technical Arsenal</div>', unsafe_allow_html=True)
 st.markdown("""
 <div class="fade-up d2">
-  <div class="sg"><div class="sgt">Languages</div><div class="sp"><span class="pill">Python</span><span class="pill">C#</span><span class="pill">TypeScript</span><span class="pill">Java</span><span class="pill">SQL</span></div></div>
-  <div class="sg"><div class="sgt">Frameworks</div><div class="sp"><span class="pill">.NET Core</span><span class="pill">FastAPI</span><span class="pill">React</span><span class="pill">Next.js</span></div></div>
-  <div class="sg"><div class="sgt">AI &amp; Data</div><div class="sp"><span class="pill">Azure OpenAI</span><span class="pill">LangChain</span><span class="pill">Semantic Kernel</span><span class="pill">RAG Architecture</span></div></div>
-  <div class="sg"><div class="sgt">Infrastructure</div><div class="sp"><span class="pill">Azure</span><span class="pill">GCP</span><span class="pill">Docker</span><span class="pill">Kubernetes</span><span class="pill">CI/CD</span></div></div>
+  <div class="sg"><div class="sgt">Languages</div><div class="sp"><span class="pill">Python</span><span class="pill">SQL</span><span class="pill">Java</span><span class="pill">C#</span><span class="pill">JavaScript</span></div></div>
+  <div class="sg"><div class="sgt">AI & Machine Learning</div><div class="sp"><span class="pill">PyTorch</span><span class="pill">TensorFlow</span><span class="pill">LLMs & RAG</span><span class="pill">XGBoost</span></div></div>
+  <div class="sg"><div class="sgt">Big Data & Cloud</div><div class="sp"><span class="pill">Apache Spark</span><span class="pill">Kafka</span><span class="pill">Azure</span><span class="pill">AWS</span><span class="pill">Docker</span></div></div>
 </div>
 """, unsafe_allow_html=True)
 
 st.markdown('<div class="sl fade-up d3">Featured Engineering</div>', unsafe_allow_html=True)
 st.markdown("""
 <div class="grid2 fade-up d3">
-  <div class="pc"><div class="pt">Open Source</div><div class="pti">LangChain Core Contributor</div><div class="pd">Resolved deep API inconsistencies within the core library to ensure consistent model behavior and structured evaluation metrics.</div><div class="pch"><span class="ch">Python</span><span class="ch">LLMOps</span></div></div>
-  <div class="pc"><div class="pt">Production System</div><div class="pti">High-Frequency Trading Platform</div><div class="pd">Architected a real-time AI platform processing 500+ events/sec with an optimized RAG layer yielding sub-second inference latency.</div><div class="pch"><span class="ch">FastAPI</span><span class="ch">React</span><span class="ch">GCP</span></div></div>
+  <div class="pc"><div class="pt">Production System</div><div class="pti">High-Frequency Trading Data</div><div class="pd">Built real-time Python ingestion pipelines using Apache Kafka for cryptocurrency market data, ensuring low-latency forecasting.</div><div class="pch"><span class="ch">Python</span><span class="ch">Kafka</span><span class="ch">SQL</span></div></div>
+  <div class="pc"><div class="pt">Architecture</div><div class="pti">Digital Twin RAG Agent</div><div class="pd">Designed a robust Retrieval-Augmented Generation (RAG) LLM application embedded with professional vector data.</div><div class="pch"><span class="ch">FAISS</span><span class="ch">LangChain</span><span class="ch">LLMOps</span></div></div>
 </div>
 """, unsafe_allow_html=True)
 
 st.markdown('<div class="sl fade-up d4">Professional History</div>', unsafe_allow_html=True)
 st.markdown("""
 <div class="tl fade-up d4">
-  <div class="ti"><div class="td"></div><div class="th"><div class="tt">Software Engineer</div><div class="tda">Dec 2025 → Present</div></div><div class="tc">RS Technologies Inc</div><ul class="tb"><li>Led design of enterprise LLM features, meeting strict latency targets.</li><li>Architected full-stack solutions with React and .NET microservices.</li></ul></div>
-  <div class="ti"><div class="td"></div><div class="th"><div class="tt">Software Engineer</div><div class="tda">Aug 2025 → Nov 2025</div></div><div class="tc">Crypt0nest.io</div><ul class="tb"><li>Built production AI trading platform.</li><li>Orchestrated containerised CI/CD pipelines on GCP.</li></ul></div>
+  <div class="ti"><div class="td"></div><div class="th"><div class="tt">AI / ML Engineer</div><div class="tda">Dec 2025 → Present</div></div><div class="tc">RS Technologies Inc</div><ul class="tb"><li>Architected end-to-end Python ML pipelines orchestrated via Apache Airflow.</li><li>Extended RESTful APIs to serve ML model predictions across AWS and Azure.</li></ul></div>
+  <div class="ti"><div class="td"></div><div class="th"><div class="tt">Machine Learning Engineer</div><div class="tda">Jan 2025 → Nov 2025</div></div><div class="tc">Tekly Studio LLC</div><ul class="tb"><li>Spearheaded LLM integration via PyTorch and Hugging Face.</li><li>Built real-time Python ingestion pipelines using Apache Kafka.</li></ul></div>
+  <div class="ti"><div class="td"></div><div class="th"><div class="tt">Machine Learning Engineer</div><div class="tda">Aug 2024 → Dec 2024</div></div><div class="tc">SelectFi</div><ul class="tb"><li>Developed gradient boosting models (XGBoost, LightGBM) for rate matching.</li><li>Deployed automated, real-time credit decisioning logic as microservices.</li></ul></div>
+  <div class="ti"><div class="td"></div><div class="th"><div class="tt">Data Engineer</div><div class="tda">Jun 2021 → Aug 2023</div></div><div class="tc">Cognizant</div><ul class="tb"><li>Built enterprise data foundation using Python, PySpark, and Azure Data Factory.</li><li>Optimized complex SQL queries and relational models in MS SQL Server.</li></ul></div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -347,7 +313,7 @@ st.markdown("""
 # ── 10. JD ANALYSIS TOOL ───────────────────────────────────────
 # ═══════════════════════════════════════════════════════════════
 st.markdown('<div class="sl fade-up d5">Alignment Engine</div>', unsafe_allow_html=True)
-st.markdown('<div class="widget-wrap fade-up d5"><div class="widget-h">Job Description Matcher</div><div class="widget-s">Paste a JD. My agent will evaluate it against my live LinkedIn profile data and calculate an alignment score.</div></div>', unsafe_allow_html=True)
+st.markdown('<div class="widget-wrap fade-up d5"><div class="widget-h">Job Description Matcher</div><div class="widget-s">Paste a JD. My agent will evaluate it against my live data and calculate an alignment score.</div></div>', unsafe_allow_html=True)
 
 jd_text = st.text_area("Job Description", placeholder="Paste the target job description...", height=160, label_visibility="collapsed")
 if st.button("⚡ Execute Analysis", use_container_width=True):
@@ -356,7 +322,7 @@ if st.button("⚡ Execute Analysis", use_container_width=True):
             docs = vector_store.similarity_search(jd_text, k=6)
             resume_ctx = "\n\n".join(d.page_content for d in docs)
             match_prompt = f"""Evaluate this candidate against the JD.
-CANDIDATE LINKEDIN DATA: {resume_ctx}
+CANDIDATE DATA: {resume_ctx}
 JOB DESCRIPTION: {jd_text}
 
 Respond EXACTLY in this format, with no conversational filler:
@@ -412,7 +378,7 @@ with c1:
     st.markdown('</div>', unsafe_allow_html=True)
 
 with c2:
-    st.markdown('<div class="widget-wrap fade-up d6" style="height: 100%;"><div class="widget-h">Interactive AI Twin</div><div class="widget-s">Query my knowledge base directly. Grounded on my LinkedIn data.</div>', unsafe_allow_html=True)
+    st.markdown('<div class="widget-wrap fade-up d6" style="height: 100%;"><div class="widget-h">Interactive AI Twin</div><div class="widget-s">Query my knowledge base directly. Grounded on my professional data.</div>', unsafe_allow_html=True)
     
     chat_container = st.container(height=250)
     with chat_container:
@@ -431,7 +397,7 @@ with c2:
                 ctx = "\n".join(d.page_content for d in vector_store.similarity_search(last_prompt, k=4)) if vector_store else ""
                 
                 # STRICT FIRST-PERSON SYSTEM PROMPT
-                persona = "You are a highly ambitious, product-focused Founding Engineer. Emphasize speed to market, shipping fast, and absolute ownership." if is_founder_mode else "You are a Senior Full Stack Engineer. Emphasize scalable architecture, clean code, and enterprise-grade stability."
+                persona = "You are a highly ambitious, product-focused Founding Engineer. Emphasize speed to market, shipping fast, and absolute ownership." if is_founder_mode else "You are a Senior Data / ML Engineer. Emphasize scalable architecture, robust data pipelines, and enterprise-grade stability."
                 
                 sys_msg = SystemMessage(content=f"""
                 You are Sai Srikar Boddupalli. 
