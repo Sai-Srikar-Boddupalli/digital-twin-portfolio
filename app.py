@@ -85,24 +85,82 @@ def send_email(name, sender_email, message):
 @st.cache_data(ttl=86400) # Cache for 24 hours
 def fetch_linkedin_profile():
     return """
-    Sai Srikar Boddupalli
-    Full Stack Software Engineer | AI Systems Architect | New York, NY
 
-    EXPERIENCE:
-    Software Engineer at RS Technologies Inc (Dec 2025 - Present)
-    - Led design of enterprise LLM-powered productivity features, meeting strict latency and token-cost targets.
-    - Architected full-stack solutions with React/TypeScript and .NET microservices.
-    - Designed Python & C# REST APIs reducing data retrieval latency by 40%.
 
-    Software Engineer (Contract) at Tekly Studio LLC / Crypt0nest.io (Aug 2025 - Nov 2025)
-    - Built and launched a production AI trading platform using FastAPI and React handling 500+ events/sec.
-    - Optimised RAG architecture for sub-second inference.
 
-    Programmer Analyst at Cognizant (Jun 2021 - Aug 2023)
-    - Developed high-availability backend services in C# and Java, integrating 20+ legacy enterprise systems.
 
-    SKILLS: Python, C#, TypeScript, .NET Core, FastAPI, React, Azure OpenAI, LangChain, RAG Pipelines, Docker, Kubernetes, Azure, GCP.
-    OPEN SOURCE: Core contributor to LangChain (PR #34424).
+1
+
+Automatic Zoom
+Sai Srikar Boddupalli½ New York, NY Ó (716) 986-4873 Rsaisrikarboddupalli@gmail.com
+PROFESSIONAL SUMMARY
+AI & ML Engineer with 5+ years of experience bridging scalable data infrastructure and advanced predictive modeling. Exper-
+tise in designing robust machine learning pipelines, integrating LLMs, and training deep learning and gradient algorithms (PyTorch,
+XGBoost) to drive outcomes in fintech and healthcare. Strong foundation in Big Data (Spark, Kafka) and MLOps (Docker, Kuber-
+netes, AWS, Azure), enabling full lifecycle model development from feature engineering and real time data ingestion to production
+deployment.
+EXPERIENCE
+RS Technologies Inc Dec 2025 – Present
+AI / ML Engineer | Remote
+• Architected end-to-end Python-based machine learning pipelines orchestrated via Apache Airflow, optimizing data flow to
+model inference endpoints for downstream consumption.
+• Developed automated feature extraction workflows using Pandas and NumPy to ensure high-fidelity data input for predictive
+models, reducing data anomalies and ingestion errors.
+• Extended RESTful APIs to serve ML model predictions and data to third-party vendors, standardizing AI integrations across
+AWS and Azure cloud environments.
+• Collaborated with cross-functional stakeholders to align AI/ML architectures with strategic business workflows, authoring techni-
+cal specifications for model governance.
+Tekly Studio LLC Jan 2025 – Nov 2025
+Machine Learning Engineer (Contract) | Remote
+• Spearheaded the integration of Large Language Models (LLMs) via PyTorch and Hugging Face, automating complex unstruc-
+tured data extraction, tagging, and text generation.
+• Built real-time Python ingestion pipelines using Apache Kafka for cryptocurrency market data, ensuring low-latency data avail-
+ability for time-series forecasting models.
+• Engineered optimized, multi-tenant SQL Server schemas designed to handle high-frequency reads/writes required by concurrent
+analytical queries and training workloads.
+• Managed end-to-end MLOps environment configuration, model testing, and seamless deployment across development and pro-
+duction servers using Docker and Kubernetes.
+SelectFi Aug 2024 – Dec 2024
+Machine Learning Engineer | Buffalo, NY
+• Developed and evaluated gradient boosting models (XGBoost, LightGBM) utilizing rigorous statistical modeling to predict
+optimal lender-to-borrower rate matching.
+• Engineered comprehensive credit risk feature pipelines, transforming raw customer financial records into clean, predictive metrics
+for high-quality model training datasets.
+• Deployed automated, real-time credit decisioning logic as containerized microservices, integrating internal predictive models with
+external lending APIs.
+• Maintained strict data integrity, auditability, and compliance for model training data within a highly regulated fintech environment.
+University at Buffalo Sep 2023 – Jul 2024
+Graduate Research Assistant – Applied ML | Buffalo, NY
+• Architected analytical models and data pipelines utilizing SciPy and Scikit-learn to ingest, transform, and evaluate massive
+research datasets under strict deadlines.
+• Applied advanced statistical analysis and machine learning techniques to extract actionable insights, directly contributing to
+data-driven research publications.
+Cognizant Technology Solutions Jun 2021 – Aug 2023
+Data Engineer – Advanced Analytics | Hyderabad, India
+• Built the enterprise data foundation for downstream analytics and ML applications using Python, PySpark, and Azure Data
+Factory (ADF) for large-scale healthcare datasets.
+• Optimized complex SQL queries and relational models in Microsoft SQL Server to accelerate data retrieval for business intelli-
+gence and predictive reporting.
+• Enforced strict HIPAA-compliant protocols across the pipeline lifecycle, ensuring secure data profiling and target mapping for
+sensitive patient records.
+PROJECTS
+LLM-Powered Personal Digital Twin for Recruiter Interactions
+• Designed and deployed a Retrieval-Augmented Generation (RAG) based Large Language Model application serving as an inter-
+active conversational agent for prospective recruiters.
+• Engineered the data pipeline to embed personal resume data and technical skills into a Vector Database, containerizing the
+application with Docker for scalable deployment.
+TECHNICAL SKILLS
+• Machine Learning & AI: Deep Learning (PyTorch, TensorFlow), LLMs, RAG, XGBoost, Scikit-learn, NLP, Statistical Modeling
+• Languages & Libraries: Python (Pandas, NumPy, SciPy), SQL, Java, C#, JavaScript
+• Big Data & Engineering: Apache Spark, PySpark, Kafka, Airflow, Azure Data Factory (ADF), ETL/ELT
+• MLOps & Cloud: AWS, GCP, Microsoft Azure, Docker, Kubernetes, CI/CD, REST APIs
+• Databases: Microsoft SQL Server, Vector Databases, Schema Design, Query Optimization
+EDUCATION
+Master of Professional Studies – Computer Information Systems & Data Sciences
+University at Buffalo, State University of New York
+Bachelor of Engineering – Computer Science
+Sri Chandrasekharendra Saraswathi Viswa Maha Vidhyalaya, India
+
     """
 
 # ── 5. AI BACKEND ──────────────────────────────────────────────
