@@ -371,8 +371,15 @@ with c1:
         if ct_name and ct_email and ct_msg:
             with st.spinner("Routing message..."):
                 save_contact(ct_name, ct_email, ct_msg)
-                send_email(ct_name, ct_email, ct_msg)
-                st.success("Message secured and delivered.")
+                
+                # Capture the actual result from the email function
+                email_status = send_email(ct_name, ct_email, ct_msg)
+                
+                if email_status is True:
+                    st.success("Message secured and delivered.")
+                else:
+                    # Print the exact Google SMTP error to the screen
+                    st.error(f"Email routing failed: {email_status}")
         else:
             st.warning("All fields are required.")
     st.markdown('</div>', unsafe_allow_html=True)
